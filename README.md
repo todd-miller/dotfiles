@@ -1,16 +1,6 @@
-# Machfiles
-
-![machfiles image](./machfiles.png)
+# Dotfiles
 
 ## Installing
-
-You will need `git` and GNU `stow`
-
-Clone into your `$HOME` directory or `~`
-
-```bash
-git clone https://github.com/ChristianChiarulli/Machfiles.git ~
-```
 
 Run `stow` to symlink everything or just select what you want
 
@@ -22,6 +12,39 @@ stow */ # Everything (the '/' ignores the README)
 stow zsh # Just my zsh config
 ```
 
-## Programs
+## To Do:
+karabiner
+tmux
+yabai
+skhd
+nvim
+lvim
+z's  --> zlogin
+zsh  --> zshenv
+vimrc
+mongorc
 
-An updated list of all the programs I use can be found in the `programs` directory
+
+# Not Sure:
+tern ?
+yarnrc
+gitconfig --> as long as there is no sensative info
+swt
+swiftpm
+rustup
+pyenv
+pgadmin
+nvm --> how to delete because now there's fnm
+mono
+matplotlib? --> do i need this?
+docker
+lemminx
+fleet
+dotnet
+cocoapods
+cargo
+azure
+aspnet
+android
+3T
+template engine

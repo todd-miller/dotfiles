@@ -1,0 +1,9 @@
+set hidden
+syntax on
+inoremap jk <esc>
+nnoremap jk <esc>
+vnoremap jk <esc> 
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+nnoremap <SPACE>w :w<CR>
+set timeoutlen=100

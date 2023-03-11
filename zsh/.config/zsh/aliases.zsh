@@ -1,22 +1,32 @@
 #!/bin/sh
-alias j='z'
-alias f='zi'
-alias g='lazygit'
+alias ll="ls -l"
+alias lla="ls -l -a"
+#alias zkn="vim \"$(python ~/Scripts/py_zettle/main.py)\""
+alias zkn="python ~/scripts/py_zettle/main.py | xargs -o vim" 
+alias tdn="python ~/scripts/py_todos/main.py | xargs -o vim"
+alias lvim="/Users/todd/.local/bin/lvim"    
+
+alias arc-brew="arch -x86_64 brew"
+    
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# --------------------------------------------------------------------------------------------------------------------------------
+# chris@machine alias'es
+# --------------------------------------------------------------------------------------------------------------------------------
+# alias j='z'
+# alias f='zi'
+# alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-alias nvimrc='nvim ~/.config/nvim/'
-alias yay="paru"
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
-
-# get fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
-
-# Remarkable
-alias remarkable_ssh='ssh root@10.11.99.1'
-alias restream='restream -p'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -38,26 +48,9 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
-# gpg encryption
-# verify signature for isos
-alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
-# receive the key of a developer
-alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
-# For when keys break
-alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
-
-# systemd
-alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
-
-alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
-
-alias m="git checkout master"
-alias s="git checkout stable"
-
-if [[ $TERM == "xterm-kitty" ]]; then
-  alias ssh="kitty +kitten ssh"
-fi
+# alias m="git checkout master"
+# alias s="git checkout stable"
 
 case "$(uname -s)" in
 
