@@ -6,6 +6,10 @@ alias zkn="python ~/scripts/py_zettle/main.py | xargs -o vim"
 alias tdn="python ~/scripts/py_todos/main.py | xargs -o vim"
 alias lvim="/Users/todd/.local/bin/lvim"    
 
+alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
+alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
+
+
 alias arc-brew="arch -x86_64 brew"
     
 export NVM_DIR="$HOME/.nvm"
@@ -48,6 +52,8 @@ alias psmem='ps auxf | sort -nr -k 4 | head -5'
 # get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
+# for rustup doc on apple sillicon before it becomes tier1 platform
+alias rustdoc="rustup doc --toolchain=stable-x86_64-apple-darwin"
 
 # alias m="git checkout master"
 # alias s="git checkout stable"
