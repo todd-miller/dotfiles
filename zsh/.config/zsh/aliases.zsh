@@ -1,7 +1,7 @@
 #!/bin/sh
 alias ll="ls -l"
 alias lla="ls -l -a"
-#alias zkn="vim \"$(python ~/Scripts/py_zettle/main.py)\""
+
 alias zkn="python ~/scripts/py_zettle/main.py | xargs -o vim" 
 alias tdn="python ~/scripts/py_todos/main.py | xargs -o vim"
 alias lvim="/Users/todd/.local/bin/lvim"    
@@ -9,9 +9,6 @@ alias lvim="/Users/todd/.local/bin/lvim"
 alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
 alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 
-
-alias arc-brew="arch -x86_64 brew"
-    
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -22,15 +19,10 @@ eval "$(pyenv init -)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# --------------------------------------------------------------------------------------------------------------------------------
-# chris@machine alias'es
-# --------------------------------------------------------------------------------------------------------------------------------
-# alias j='z'
-# alias f='zi'
-# alias g='lazygit'
+alias j='z'
+alias f='zi'
+alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-
-# alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -46,15 +38,14 @@ alias rm='rm -i'
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
+# TODO - psmem and pscpu not working
 # get top process eating memory
-alias psmem='ps auxf | sort -nr -k 4 | head -5'
-
+# alias psmem='ps auxf | sort -nr -k 4 | head -5'
 # get top process eating cpu ##
-alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+# alias pscpu='ps auxf | sort -nr -k 3 | head -5'
 
-# for rustup doc on apple sillicon before it becomes tier1 platform
-alias rustdoc="rustup doc --toolchain=stable-x86_64-apple-darwin"
-
+# TODO - does not work --> for rustup doc on apple sillicon before it becomes tier1 platform
+# alias rustdoc="rustup doc --toolchain=stable-x86_64-apple-darwin"
 # alias m="git checkout master"
 # alias s="git checkout stable"
 

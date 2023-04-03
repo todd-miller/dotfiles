@@ -12,25 +12,30 @@ stow */ # Everything (the '/' ignores the README)
 stow zsh # Just my zsh config
 ```
 
-## To Do:
+## Config Wants
+- skhd killed my ability to vim move lines up or down (Alt Key is basically nuked) - I don't like this
+  - I like yabai full-screening, but this makes it lame, remap?...
+  - need to take a closer look at keymaps
+
+
+- something is killing my session load times, maybe unplug everything and
+  measure?
+  - start with tmux and zshrc configs and nuke?
+    - timeit somehow?
+
+## Migrations To Dotfiles:
+#### Todo:
 karabiner
-tmux
 yabai
 skhd
 nvim
-lvim
 z's  --> zlogin
 zsh  --> zshenv
 vimrc
-mongorc
 
-
-# Not Sure:
+#### Should I Migrate?:
 tern ?
-yarnrc
-gitconfig --> as long as there is no sensative info
 swt
-swiftpm
 rustup
 pyenv
 pgadmin
