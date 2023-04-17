@@ -38,6 +38,9 @@ alias rm='rm -i'
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
+# TODO - ESP-IDF 
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
 # TODO - psmem and pscpu not working
 # get top process eating memory
 # alias psmem='ps auxf | sort -nr -k 4 | head -5'

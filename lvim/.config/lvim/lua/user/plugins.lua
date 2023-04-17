@@ -10,8 +10,22 @@ lvim.plugins = {
   -- window navigation
   "christoomey/vim-tmux-navigator",
 
-  -- angular
-  -- "nvim-treesitter/nvim-treesitter-angular",
+  -- nx extension
+  {
+    'Equilibris/nx.nvim',
+    requires = {
+        'nvim-telescope/telescope.nvim',
+    },
+    config = function()
+        require("nx").setup {}
+    end
+  },
+
+  -- markdown preview
+  {
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  },
 
   -- zettlekasten notes
   "renerocksai/telekasten.nvim",
