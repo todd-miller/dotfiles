@@ -18,6 +18,13 @@ lvim.builtin.which_key.mappings["f"] = {
   h = { "<cmd>Telescope help_tags<cr>", "Help" },
 }
 
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Vim-Test",
+  n = { "<cmd>TestNearest<cr>", "Test Nearest" },
+  f = { "<cmd>TestFile<cr>", "Test File" },
+  l = { "<cmd>TestLast<cr>", "Test Last" },
+}
+
 lvim.builtin.which_key.mappings["k"] = {
   name = "Telekasten",
   s = { "<cmd>Telekasten search_notes<cr>", "Search Notes" },
@@ -26,7 +33,7 @@ lvim.builtin.which_key.mappings["k"] = {
   d = { "<cmd>Telekasten goto_today<cr>", "Go To Today" },
   w = { "<cmd>Telekasten goto_thisweek<cr>", "Go To Week" },
   p = { "<cmd>Telekasten panel<cr>", "Panel" },
-  l = { "<cmd>Telekasten follow_link<cr>", "Panel" },
+  l = { "<cmd>Telekasten follow_link<cr>", "Follow Link" },
 }
 
 lvim.builtin.which_key.mappings["Q"] = {

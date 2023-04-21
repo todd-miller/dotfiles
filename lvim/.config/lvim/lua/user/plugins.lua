@@ -1,4 +1,3 @@
-
 lvim.plugins = {
   -- color schemes
   "rebelot/kanagawa.nvim",
@@ -7,25 +6,15 @@ lvim.plugins = {
   "sainnhe/gruvbox-material",
   "savq/melange-nvim",
 
+  'mfussenegger/nvim-dap-python',
+  'nvim-telescope/telescope-dap.nvim',
+
   -- window navigation
   "christoomey/vim-tmux-navigator",
 
-  -- nx extension
-  {
-    'Equilibris/nx.nvim',
-    requires = {
-        'nvim-telescope/telescope.nvim',
-    },
-    config = function()
-        require("nx").setup {}
-    end
-  },
 
-  -- markdown preview
-  {
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  },
+  -- vim-test
+  "todd-miller/vim-test",
 
   -- zettlekasten notes
   "renerocksai/telekasten.nvim",
@@ -65,5 +54,3 @@ lvim.plugins = {
     end,
   },
 }
-
-

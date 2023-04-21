@@ -9,7 +9,7 @@ lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
 lvim.colorscheme = "lunar"
 lvim.builtin.bufferline.options.always_show_bufferline = false
-lvim.colorscheme = "kanagawa"
+lvim.colorscheme = "gruvbox"
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
