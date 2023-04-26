@@ -13,9 +13,6 @@ export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
 
-# esp espressif
-export ADF_PATH=$HOME/esp/esp-adf
-
 # export XDG_CURRENT_DESKTOP="Wayland"
 #export PATH="$PATH:./node_modules/.bin"
 eval "$(fnm env)"
