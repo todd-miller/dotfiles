@@ -6,22 +6,31 @@ lvim.plugins = {
   "sainnhe/gruvbox-material",
   "savq/melange-nvim",
 
-  'mfussenegger/nvim-dap-python',
   'nvim-telescope/telescope-dap.nvim',
 
   -- window navigation
   "christoomey/vim-tmux-navigator",
-
+  
+  -- markdown preview
+  {
+    "iamcco/markdown-preview.nvim",
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
 
   -- vim-test
   "todd-miller/vim-test",
 
+
   -- zettlekasten notes
+  {
   "renerocksai/telekasten.nvim",
+   dependencies = {'nvim-telescope/telescope.nvim'}
+  },
+  "akinsho/toggleterm.nvim",
   "simrat39/rust-tools.nvim",
   {
     "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("todo-comments").setup {
         -- your configuration comes here
@@ -33,8 +42,8 @@ lvim.plugins = {
   -- rust
   {
     "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("crates").setup {
         null_ls = {
