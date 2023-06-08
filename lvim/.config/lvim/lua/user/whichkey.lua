@@ -20,17 +20,6 @@ lvim.builtin.which_key.mappings["t"] = {
   l = { "<cmd>TestLast<cr>", "Test Last" },
 }
 
--- lvim.builtin.which_key.mappings["k"] = {
---   name = "Telekasten",
---   s = { "<cmd>Telekasten search_notes<cr>", "Search Notes" },
---   n = { "<cmd>Telekasten new_templated_note<cr>", "New Note" },
---   t = { "<cmd>Telekasten show_tags<cr>", "Show Tags" },
---   d = { "<cmd>Telekasten goto_today<cr>", "Go To Today" },
---   w = { "<cmd>Telekasten goto_thisweek<cr>", "Go To Week" },
---   p = { "<cmd>Telekasten panel<cr>", "Panel" },
---   l = { "<cmd>Telekasten follow_link<cr>", "Follow Link" },
--- }
-
 lvim.builtin.which_key.mappings["Q"] = {
   "<cmd>quit<cr>", "Quit Pane"
 }
@@ -63,3 +52,5 @@ lvim.builtin.which_key.mappings["o"] = {
   j = { "<cmd>lua require('harpoon.ui').nav_next() <cr>", "Next" },
 
 }
+
+

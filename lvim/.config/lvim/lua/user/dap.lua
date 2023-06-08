@@ -1,4 +1,3 @@
-
 local dap = require('dap')
 
 dap.adapters.typescript = {
@@ -24,4 +23,5 @@ dap.configurations.typescript = {
     protocol = 'inspector',
   },
 }
+
 

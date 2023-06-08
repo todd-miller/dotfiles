@@ -17,9 +17,8 @@ lvim.plugins = {
     build = function() vim.fn["mkdp#util#install"]() end,
   },
 
-  -- vim-test
-  "todd-miller/vim-test",
-
+  -- oil vim - (file-sys manipulation)
+  'stevearc/oil.nvim',
 
   -- zettlekasten notes
   {
