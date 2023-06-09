@@ -12,13 +12,5 @@ lvim.keys.normal_mode["∆"] = ":m .+1<CR>=="
 lvim.keys.normal_mode["˚"] = ":m .-2<CR>=="
 lvim.keys.normal_mode["n"] = "nzz"
 lvim.keys.normal_mode["N"] = "Nzz"
-lvim.keys.normal_mode["m"] = ":Oil"
-
--- TODO - visual block movement mappings not working
--- k == ˚
--- lvim.keys.visual_mode["˚"] = ":m-2<CR>gv=gv"
-
--- j == ∆
--- lvim.keys.visual_mode["∆"] = ":m>+1<CR>gv=gv"
-
+lvim.keys.normal_mode["-"] = ":Oil<CR>"
 
