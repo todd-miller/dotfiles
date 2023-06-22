@@ -10,13 +10,41 @@ lvim.plugins = {
 
   -- window navigation
   "christoomey/vim-tmux-navigator",
-  
+
   -- markdown preview
   {
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
   },
-
+  {
+    "mfussenegger/nvim-dap",
+    lazy = false,
+    -- module = { "dap" },
+    keys = { [[<leader>d]] },
+    dependencies = {
+      "theHamsta/nvim-dap-virtual-text",
+      "rcarriga/nvim-dap-ui",
+      "mfussenegger/nvim-dap-python",
+      "nvim-telescope/telescope-dap.nvim",
+      { "leoluz/nvim-dap-go",                module = "dap-go" },
+      { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+      { "mxsdev/nvim-dap-vscode-js",         module = { "dap-vscode-js" } },
+      {
+        "microsoft/vscode-js-debug",
+        lazy = false,
+        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+      },
+    },
+    config = function()
+      require("user.dap").setup()
+    end,
+    enabled = true,
+  },
+  {
+    "microsoft/vscode-js-debug",
+    lazy = true,
+    build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+  },
   -- oil vim - (file-sys manipulation)
   {
     'stevearc/oil.nvim',
@@ -40,16 +68,16 @@ lvim.plugins = {
           ["g."] = "actions.toggle_hidden",
         },
         view_options = {
-            -- Show files and directories that start with "."
-            show_hidden = true,
-            -- This function defines what is considered a "hidden" file
-            is_hidden_file = function(name, bufnr)
-              return vim.startswith(name, ".")
-            end,
-            -- This function defines what will never be shown, even when `show_hidden` is set
-            is_always_hidden = function(name, bufnr)
-              return false
-            end,
+          -- Show files and directories that start with "."
+          show_hidden = true,
+          -- This function defines what is considered a "hidden" file
+          is_hidden_file = function(name, bufnr)
+            return vim.startswith(name, ".")
+          end,
+          -- This function defines what will never be shown, even when `show_hidden` is set
+          is_always_hidden = function(name, bufnr)
+            return false
+          end,
         },
       }
     end
@@ -57,8 +85,8 @@ lvim.plugins = {
 
   -- zettlekasten notes
   {
-  "renerocksai/telekasten.nvim",
-   dependencies = {'nvim-telescope/telescope.nvim'}
+    "renerocksai/telekasten.nvim",
+    dependencies = { 'nvim-telescope/telescope.nvim' }
   },
   "akinsho/toggleterm.nvim",
   "simrat39/rust-tools.nvim",
