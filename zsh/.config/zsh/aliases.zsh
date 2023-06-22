@@ -2,10 +2,9 @@
 alias ll="ls -l"
 alias lla="ls -l -a"
 
-alias zkn="python ~/scripts/py_zettle/main.py | xargs -o vim" 
-alias tdn="python ~/scripts/py_todos/main.py | xargs -o vim"
 alias lvim="$HOME/.local/bin/lvim"    
 
+# TODO - OSx specific  - consider moving 
 alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
 alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 
