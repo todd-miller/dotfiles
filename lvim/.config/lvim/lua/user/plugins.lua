@@ -16,30 +16,30 @@ lvim.plugins = {
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
   },
-  {
-    "mfussenegger/nvim-dap",
-    lazy = false,
-    -- module = { "dap" },
-    keys = { [[<leader>d]] },
-    dependencies = {
-      "theHamsta/nvim-dap-virtual-text",
-      "rcarriga/nvim-dap-ui",
-      "mfussenegger/nvim-dap-python",
-      "nvim-telescope/telescope-dap.nvim",
-      { "leoluz/nvim-dap-go",                module = "dap-go" },
-      { "jbyuki/one-small-step-for-vimkind", module = "osv" },
-      { "mxsdev/nvim-dap-vscode-js",         module = { "dap-vscode-js" } },
-      {
-        "microsoft/vscode-js-debug",
-        lazy = false,
-        build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-      },
-    },
-    config = function()
-      require("user.dap").setup()
-    end,
-    enabled = true,
-  },
+  -- {
+  --   "mfussenegger/nvim-dap",
+  --   lazy = false,
+  --   -- module = { "dap" },
+  --   keys = { [[<leader>d]] },
+  --   dependencies = {
+  --     "theHamsta/nvim-dap-virtual-text",
+  --     "rcarriga/nvim-dap-ui",
+  --     "mfussenegger/nvim-dap-python",
+  --     "nvim-telescope/telescope-dap.nvim",
+  --     { "leoluz/nvim-dap-go",                module = "dap-go" },
+  --     { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+  --     { "mxsdev/nvim-dap-vscode-js",         module = { "dap-vscode-js" } },
+  --     {
+  --       "microsoft/vscode-js-debug",
+  --       lazy = false,
+  --       build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+  --     },
+  --   },
+  --   config = function()
+  --     require("user.dap").setup()
+  --   end,
+  --   enabled = true,
+  -- },
   {
     "microsoft/vscode-js-debug",
     lazy = true,
