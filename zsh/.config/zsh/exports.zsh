@@ -13,14 +13,8 @@ export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
 
-# quovis 
-# kubectl krew
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-# istio binaries
-export PATH="$PATH:$PWD/istio-1.16.1/bin"
-
 # export XDG_CURRENT_DESKTOP="Wayland"
-#export PATH="$PATH:./node_modules/.bin"
-eval "$(fnm env)"
+# export PATH="$PATH:./node_modules/.bin"
+# eval "$(fnm env)"
 
 eval "$(zoxide init zsh)"
