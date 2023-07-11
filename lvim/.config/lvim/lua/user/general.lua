@@ -1,4 +1,3 @@
-
 -- general
 vim.opt.timeoutlen = 80
 vim.opt.textwidth = 80

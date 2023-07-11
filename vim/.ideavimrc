@@ -1,9 +1,32 @@
-set hidden
-syntax on
-inoremap jk <esc>
-nnoremap jk <esc>
-vnoremap jk <esc> 
-nnoremap <SPACE> <Nop>
+source ~/.vimrc
+set surround
+set multiple-cursors
+set clipboard+=ideaput
+set ideajoin
+unmap ' '
+unmap <s-_>
 let mapleader=" "
-nnoremap <SPACE>w :w<CR>
-set timeoutlen=100
+
+Plug 'vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'preservim/nerdtree'
+
+
+nnoremap <Leader>w :action w<CR>
+
+nnoremap <Leader>z :action ToggleZenMode<CR>
+nnoremap <s-h> :action PreviousTab<CR>
+nnoremap <s-l> :action NextTab<CR>
+nnoremap <c-l> :action NextSplitter<CR>
+nnoremap <c-h> :action PrevSplitter<CR>
+nnoremap <s-\> :action SplitVertically<CR>
+nnoremap <s--> :action SplitHorizontally<CR>
+nnoremap <s-=> :action Unsplit<CR>
+nnoremap <s-m> :action MoveEditorToOppositeTabGroup<CR>
+
+inoremap <s--> _
+
+nnoremap <leader>e :NERDTreeToggle<CR>
+
