@@ -1,11 +1,4 @@
 source ~/.vimrc
-set surround
-set multiple-cursors
-set clipboard+=ideaput
-set ideajoin
-unmap ' '
-unmap <s-_>
-let mapleader=" "
 
 Plug 'vim-easymotion'
 Plug 'tpope/vim-surround'
@@ -13,20 +6,33 @@ Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdtree'
 
+set surround
+set multiple-cursors
+set clipboard+=ideaput
+set showmode
+set easymotion
 
-nnoremap <Leader>w :action w<CR>
+let mapleader=" "
 
-nnoremap <Leader>z :action ToggleZenMode<CR>
-nnoremap <s-h> :action PreviousTab<CR>
-nnoremap <s-l> :action NextTab<CR>
-nnoremap <c-l> :action NextSplitter<CR>
-nnoremap <c-h> :action PrevSplitter<CR>
-nnoremap <s-\> :action SplitVertically<CR>
-nnoremap <s--> :action SplitHorizontally<CR>
-nnoremap <s-=> :action Unsplit<CR>
-nnoremap <s-m> :action MoveEditorToOppositeTabGroup<CR>
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+map <leader>w :w <CR>
+map <leader>q :q <CR>
+map <leader>o :NERDTreeToggle<CR>
 
-inoremap <s--> _
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>a <Action>(Annotate)
+map <leader>d <Action>(Debug)
+map <leader>c <Action>(Stop)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>/ <Action>(CommentByLineComment)
 
-nnoremap <leader>e :NERDTreeToggle<CR>
+map <c-l> :action NextSplitter<CR>
+map <c-h> :action PrevSplitter<CR>
 
+map <home>h :action PreviousTab<CR>
+map <home>l :action NextTab<CR>
+map <home>\ :action SplitVertically<CR>
+map <home>- :action SplitHorizontally<CR>
+# map <home>= :action Unsplit<CR>
+map <home>m :action MoveEditorToOppositeTabGroup<CR>
