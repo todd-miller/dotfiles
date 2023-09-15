@@ -5,6 +5,9 @@
 # history
 HISTFILE=~/.zsh_history
 
+# nvm source
+source $(brew --prefix nvm)/nvm.sh
+
 # source
 source ~/.env/.env_zsh
 plug "$HOME/.config/zsh/exports.zsh"
@@ -14,10 +17,13 @@ plug "$HOME/.config/zsh/aliases.zsh"
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
+
+# todo - this is not working
+# plug "zap-zsh/exa"
+
 plug "zap-zsh/vim"
 plug "todd-miller/zsh-prompt"
 plug "zap-zsh/fzf"
-plug "zap-zsh/exa"
 plug "zsh-users/zsh-syntax-highlighting"
 
 # keybinds

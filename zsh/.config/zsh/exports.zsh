@@ -4,6 +4,9 @@ SAVEHIST=1000000
 
 export EDITOR="nvim"
 export BROWSER="chrome"
+
+export NVM_DIR="$HOME/.nvm"
+export PATH="$HOME/.local/bin":$PATH
 export MANPAGER='lvim +Man!'
 export MANWIDTH=999
 export GOPATH=$HOME/.local/share/go
@@ -17,6 +20,7 @@ export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.cargo/bin:$PATH 
 export PATH=$HOME/.local/share/go/bin:$PATH
 export PATH=$HOME/.fnm:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 # NVM
 # export NVM_DIR="$HOME/.nvm"
