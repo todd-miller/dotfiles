@@ -20,6 +20,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 
 # keybinds
 bindkey '^ ' autosuggest-accept
+bindkey jk vi-cmd-mode
+export KEYTIMEOUT=10
 
 export PATH="$HOME/.local/bin":$PATH
 

@@ -12,6 +12,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export GOPATH=$HOME/.local/share/go
 export PATH=$HOME/.fnm:$PATH
+export VI_MODE_ESC_INSERT="jk"
 
 # export XDG_CURRENT_DESKTOP="Wayland"
 # export PATH="$PATH:./node_modules/.bin"

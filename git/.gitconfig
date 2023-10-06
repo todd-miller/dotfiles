@@ -1,0 +1,18 @@
+[safe]
+	directory = /home/todd/vulcan/cloud
+[user]
+	email = t.miller07@gmail.com
+	name = todd
+[alias]
+	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
+	new = lg development..HEAD
+	missing = lg HEAD..development
+[core]
+	pager = delta
+[rebase]
+	autosquash = true
+	autoStash = true
+[rerere]
+	enabled = true
+[credential]
+	helper = store
