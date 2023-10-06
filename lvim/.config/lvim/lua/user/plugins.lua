@@ -31,7 +31,6 @@ lvim.plugins = {
     lazy = true,
     build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   },
-  -- oil vim - (file-sys manipulation)
   {
     'stevearc/oil.nvim',
     opts = {},
@@ -89,6 +88,10 @@ require("neotest").setup({
     })
   }
 })
+
+
+
+
 
 
 
