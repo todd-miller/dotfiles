@@ -38,6 +38,10 @@ alias rm='rm -i'
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
+
+# vulcan/bfusa specific
+alias start-mongo="$MONGODIR/bin/mongod.exe --storageEngine wiredTiger --dbpath $MONGODIR/database/WiredTiger"
+
 # TODO - psmem and pscpu not working
 # get top process eating memory
 # alias psmem='ps auxf | sort -nr -k 4 | head -5'

@@ -6,7 +6,7 @@ vim.opt.relativenumber = true
 -- lvim general
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "rose-pine"
 lvim.builtin.bufferline.options.always_show_bufferline = false
 -- lvim.colorscheme = "gruvbox"
 

@@ -32,9 +32,21 @@ return {
 	    'VonHeikemen/lsp-zero.nvim',
 	    branch = 'v2.x',
 	    dependencies = {
-	      -- LSP Support
-	      {'neovim/nvim-lspconfig'},             -- Required
-	      {'williamboman/mason.nvim'},           -- Optional
+	      {
+		      'neovim/nvim-lspconfig',
+		      config = function ()
+			      require "plugins.configs.lspconfig"
+			      require "custom.configs.lspconfig"
+		      end,
+	      },
+	      {
+		      'williamboman/mason.nvim',
+		      opts = {
+			      ensure_installed = {
+				      "pyright",
+			      },
+		      },
+	      },
 	      {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 	      -- Autocompletion

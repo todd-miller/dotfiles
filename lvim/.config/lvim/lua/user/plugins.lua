@@ -16,11 +16,16 @@ lvim.plugins = {
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
   },
+	{
+		'rose-pine/neovim',
+		name = 'rose-pine'
+	},
 
   -- surround vim
   "tpope/vim-surround",
-  -- {
-  --   "mfussenegger/nvim-dap",
+  "mfussenegger/nvim-dap-python",
+  "nvim-neotest/neotest",
+  "nvim-neotest/neotest-python",
   --   lazy = false,
   --   -- module = { "dap" },
   --   keys = { [[<leader>d]] },
@@ -121,10 +126,23 @@ lvim.plugins = {
       }
     end,
   },
-  {
-    "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup()
-    end,
-  },
 }
+
+lvim.builtin.dap.active = true
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+require("neotest").setup({
+  adapters = {
+    require("neotest-python")({
+      dap = {
+        justMyCode = false,
+        console = "integratedTerminal",
+      },
+      args = { "--log-level", "DEBUG", "--quiet"},
+      runner = "pytest",
+    })
+  }
+})
+
+
+
