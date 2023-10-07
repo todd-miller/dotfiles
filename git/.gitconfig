@@ -16,3 +16,8 @@
 	enabled = true
 [credential]
 	helper = store
+[pager]
+  blame = delta
+[delta]
+  side-by-side = true
+  line-numbers = true
