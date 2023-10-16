@@ -40,7 +40,7 @@ alias free='free -m' # show sizes in MB
 
 
 # vulcan/bfusa specific
-alias start-mongo="$MONGODIR/bin/mongod.exe --storageEngine wiredTiger --dbpath $MONGODIR/database/WiredTiger"
+alias start-mongo="~/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
 
 # TODO - psmem and pscpu not working
 # get top process eating memory

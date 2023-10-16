@@ -33,7 +33,6 @@ lvim.plugins = {
   },
   {
     'stevearc/oil.nvim',
-    opts = {},
     dependencies = { "nvim-tree/nvim-web-devicons"},
   },
   -- zettlekasten notes
