@@ -1,7 +1,11 @@
 -- lsp
+local lspconfig = require "lsp.config"
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { command = "eslint", filetypes = { "typescript", "typescriptreact" } },
+  {
+    command = "eslint",
+    filetypes = { "typescript", "typescriptreact" }
+  },
 }
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })

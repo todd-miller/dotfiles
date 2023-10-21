@@ -15,9 +15,9 @@ stow -d ~/dotfiles zsh # Just my zsh config
 
 ## Todo:
 - [ ] alias for `stow -d ~/dotfiles`
-- [ ] python debugger 
+- [p] python debugger 
 - [ ] javascript debugger
 - [ ] setup WSL on Desktop Machine!
 - [ ] a Docker image of Debian or something would be slick 
     - spend time understanding WSL and new Linux images
-- [ ] how can i network my computers together?
+- [ ] how can i network my computers together

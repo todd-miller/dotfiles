@@ -1,4 +1,3 @@
-
 lvim.leader = "space"
 
 lvim.keys.insert_mode["jk"] = "<ESC>"

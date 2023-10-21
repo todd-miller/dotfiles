@@ -53,4 +53,3 @@ lvim.builtin.which_key.mappings["o"] = {
 
 }
 
-

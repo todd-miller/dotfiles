@@ -1,7 +1,7 @@
 require("user.general");
 require("user.whichkey");
 require("user.plugins");
-require("user.dap");
+-- require("user.dap");
 require("user.oil");
 require("user.settings");
 require("user.treesitter");

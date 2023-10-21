@@ -21,3 +21,5 @@
 [delta]
   side-by-side = true
   line-numbers = true
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
