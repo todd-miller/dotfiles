@@ -20,7 +20,6 @@ lvim.plugins = {
     lazy = true,
     build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   },
-  "williamboman/mason",
   {
     'stevearc/oil.nvim',
     dependencies = { "nvim-tree/nvim-web-devicons"},

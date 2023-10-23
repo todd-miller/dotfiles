@@ -6,7 +6,7 @@ require("user.oil");
 require("user.settings");
 require("user.treesitter");
 require("user.keymaps");
-require("user.lsp");
+-- require("user.lsp");
 require("user.telescope");
 
 lvim.transparent_window = true
