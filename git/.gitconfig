@@ -1,8 +1,12 @@
 [safe]
 	directory = /home/todd/vulcan/cloud
 [user]
-	email = t.miller07@gmail.com
-	name = todd
+	; email = t.miller07@gmail.com
+	; name = todd
+  name = todd-miller
+	email = millertodd@contractor.bfusa.com
+[credential "http://appgit01dpd.idm.bfusa.com:7990"]
+	provider = bitbucket
 [alias]
 	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
 	new = lg development..HEAD
