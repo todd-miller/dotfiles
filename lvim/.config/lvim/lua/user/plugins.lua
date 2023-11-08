@@ -16,11 +16,6 @@ lvim.plugins = {
 	},
   "tpope/vim-surround",
   {
-    "microsoft/vscode-js-debug",
-    lazy = true,
-    build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-  },
-  {
     'stevearc/oil.nvim',
     dependencies = { "nvim-tree/nvim-web-devicons"},
   },
