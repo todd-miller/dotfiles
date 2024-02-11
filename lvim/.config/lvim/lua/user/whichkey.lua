@@ -11,14 +11,7 @@ lvim.builtin.which_key.mappings["f"] = {
   g = { "<cmd>Telescope live_grep<cr>", "Live Grep" },
   b = { "<cmd>Telescope buffers<cr>", "Buffers" },
   h = { "<cmd>Telescope help_tags<cr>", "Help" },
-}
-
-lvim.builtin.which_key.mappings["t"] = {
-  name = "Vim-Test",
-  n = { "<cmd>TestNearest<cr>", "Test Nearest" },
-  f = { "<cmd>TestFile<cr>", "Test File" },
-  l = { "<cmd>TestLast<cr>", "Test Last" },
-}
+};
 
 lvim.builtin.which_key.mappings["Q"] = {
   "<cmd>quit<cr>", "Quit Pane"

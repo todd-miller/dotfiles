@@ -6,6 +6,8 @@ lvim.plugins = {
   "savq/melange-nvim",
   'nvim-telescope/telescope-dap.nvim',
   "christoomey/vim-tmux-navigator",
+  "mfussenegger/nvim-dap",
+  "mxsdev/nvim-dap-vscode-js",
   {
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
@@ -32,7 +34,6 @@ lvim.plugins = {
       }
     end
   },
-  -- rust
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
@@ -49,7 +50,6 @@ lvim.plugins = {
       }
     end,
   },
-  "ChristianChiarulli/swenv.nvim",
   "stevearc/dressing.nvim",
 }
  
