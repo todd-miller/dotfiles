@@ -1,0 +1,8 @@
+require("user.options")
+require("user.lazy")
+require("user.oil")
+require("user.keymaps")
+require("user.telescope")
+require("user.treesitter")
+require("user.lsp")
+require("user.cmp")
