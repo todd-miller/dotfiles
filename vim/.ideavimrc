@@ -19,6 +19,7 @@ map <leader>e <Plug>(easymotion-f)
 map <leader>w :w <CR>
 map <leader>q :q <CR>
 map <leader>o :NERDTreeToggle<CR>
+map <leader>+ $<C-+>
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>a <Action>(Annotate)
