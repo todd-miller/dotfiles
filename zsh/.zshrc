@@ -5,8 +5,8 @@
 HISTFILE=~/.zsh_history
 
 # source
-plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
+plug "$HOME/.config/zsh/aliases.zsh"
 
 # plugins
 plug "zsh-users/zsh-autosuggestions"
@@ -28,6 +28,8 @@ export PATH="$HOME/.local/bin":$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GPG_TTY=4826EB501C3BBA98
 
 autoload -Uz compinit
 compinit

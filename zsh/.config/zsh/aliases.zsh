@@ -40,9 +40,12 @@ alias free='free -m' # show sizes in MB
 
 
 # vulcan/bfusa specific
-alias start-mongo="~/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
+alias start-mongo="~/vulcan/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
+alias start-cloud="cd ~/vulcan/cloud/ && python plugin_dev/v17servicenode_launcher.py"
+alias start-toolkit="cd ~/repos/toolkit/app-react && npm run watch"
 alias ~~="cd /mnt/c/users/cw109854/"
 alias ~="cd ~"
+alias vulcanDev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
 
 # TODO - psmem and pscpu not working
 # get top process eating memory
@@ -73,3 +76,4 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+

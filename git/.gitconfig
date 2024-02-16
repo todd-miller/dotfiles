@@ -1,10 +1,10 @@
 [safe]
 	directory = /home/todd/vulcan/cloud
+	directory = /home/todd/repos/toolkit
 [user]
-	; email = t.miller07@gmail.com
-	; name = todd
-  name = todd-miller
+  name = millertodd
 	email = millertodd@contractor.bfusa.com
+	signkey = 4826EB501C3BBA98
 [credential "http://appgit01dpd.idm.bfusa.com:7990"]
 	provider = bitbucket
 [alias]
@@ -27,3 +27,5 @@
   line-numbers = true
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
+[commit]
+	gpgsign = true
