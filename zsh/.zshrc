@@ -34,3 +34,10 @@ export GPG_TTY=4826EB501C3BBA98
 autoload -Uz compinit
 compinit
 
+
+# bun completions
+[ -s "/home/todd/.bun/_bun" ] && source "/home/todd/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

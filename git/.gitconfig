@@ -1,12 +1,10 @@
 [safe]
 	directory = /home/todd/vulcan/cloud
 	directory = /home/todd/repos/toolkit
+	directory = /home/todd/
 [user]
-  name = millertodd
-	email = millertodd@contractor.bfusa.com
-	signkey = 4826EB501C3BBA98
-[credential "http://appgit01dpd.idm.bfusa.com:7990"]
-	provider = bitbucket
+	name = Todd Miller
+	email = MillerTodd@contractor.bfusa.com
 [alias]
 	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
 	new = lg development..HEAD
@@ -19,7 +17,7 @@
 [rerere]
 	enabled = true
 [credential]
-	helper = store
+	helper = /mnt/c/Users/cw109854/PortableGit/mingw64/bin/git-credential-manager.exe
 [pager]
   blame = delta
 [delta]
@@ -28,4 +26,6 @@
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
 [commit]
-	gpgsign = true
+	gpgsign = false
+[init]
+	defaultBranch = main
