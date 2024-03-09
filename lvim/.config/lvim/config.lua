@@ -6,8 +6,6 @@ require("user.treesitter");
 require("user.keymaps");
 require("user.telescope");
 require("user.whichkey");
--- require("user.dap");
--- require("user.lsp");
 
 lvim.transparent_window = true
 
