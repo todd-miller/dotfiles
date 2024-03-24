@@ -4,8 +4,10 @@ vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
-vim.keymap.set('n', 'zR', ufo.openAllFolds)
-vim.keymap.set('n', 'zM', ufo.closeAllFolds)
+-- TODO: - try to make single fold work, look at Jetbrains defaults and 
+-- read docs a bit more
+vim.keymap.set('n', '<leader>++', ufo.openAllFolds)
+vim.keymap.set('n', '<leader>__', ufo.closeAllFolds)
 
 -- Option 2: nvim lsp as LSP client
 -- Tell the server the capability of foldingRange,

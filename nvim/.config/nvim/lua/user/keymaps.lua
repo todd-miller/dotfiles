@@ -1,4 +1,4 @@
-vim.keymap.set({ 'n', 'v'}, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v'}, '<space>', '<nop>', { silent = true })
 
 -- escape
 vim.keymap.set({ 'i' }, 'jk', '<Escape>')
@@ -14,6 +14,8 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 vim.keymap.set('n', '<leader>|', ':vs<CR>', { desc = 'Vertical Split' })
 vim.keymap.set('n', '<leader>-', ':split<CR>', { desc = 'Horizontal Split' })
+vim.keymap.set('n', '<leader>H', ':noh<CR>', { desc = 'Un-[H]ighlight' })
+vim.keymap.set('n', '<leader>lg', ':LazyGit<CR>', { desc = '[L]azy-[G]it' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

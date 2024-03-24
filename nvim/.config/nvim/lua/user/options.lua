@@ -19,8 +19,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.clipboard = 'unnamedplus'
 
-vim.o.updatetime = 250
-vim.o.timeoutlen = 300
+vim.o.updatetime = 150
+vim.o.timeoutlen = 200
 
 vim.o.termguicolors = true
 vim.o.completeopt = 'menuone,noselect'
