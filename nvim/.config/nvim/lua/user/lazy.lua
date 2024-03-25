@@ -49,11 +49,11 @@ lazy.setup({
     'stevearc/oil.nvim',
     dependencies = { "nvim-tree/nvim-web-devicons"},
   },
-  {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = { "nvim-lua/plenary.nvim" }
-  },
+  -- {
+  --   "ThePrimeagen/harpoon",
+  --   branch = "harpoon2",
+  --   dependencies = { "nvim-lua/plenary.nvim" }
+  -- },
 
   -- NOTE : This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
