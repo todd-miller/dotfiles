@@ -1,7 +1,6 @@
 #!/bin/sh
 alias ll="ls -l"
-alias lla="ls -l -a"
-
+alias lla="ls -al"
 alias lvim="$HOME/.local/bin/lvim"    
 
 # TODO - OSx specific  - consider moving 
@@ -19,9 +18,9 @@ eval "$(pyenv init -)"
 export PATH="/usr/bin/nvim-linux64/bin/nvim:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-alias j='z'
-alias f='zi'
-alias g='lazygit'
+# alias j='z'
+# alias f='zi'
+# alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # Colorize grep output (good for log files)
@@ -41,11 +40,15 @@ alias free='free -m' # show sizes in MB
 
 # vulcan/bfusa specific
 alias start-mongo="~/vulcan/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
+alias mongo="~/repos/mongo_scripts/mongo.sh"
 alias start-cloud="cd ~/vulcan/cloud/ && python plugin_dev/v17servicenode_launcher.py"
 alias start-toolkit="cd ~/repos/toolkit/app-react && npm run watch"
 alias ~~="cd /mnt/c/users/cw109854/"
 alias ~="cd ~"
-alias vulcanDev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
+alias ssh-vulcan-dev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
+alias ssh-hpcmgt="sshpass -p Bridge@123 ssh -v -oHostKeyAlgorithms=+ssh-rsa shaniuk@hpcmgt01ppd.idm.bfusa.com"
+alias ssh-slurm="sshpass -p Bf20239854FallQuarter ssh millertodd@contractor.bfusa.com@10.243.28.113"
+alias ssh-stable="sshpass -p vulcan17 ssh vjuser@10.139.15.89"
 
 # TODO - psmem and pscpu not working
 # get top process eating memory
