@@ -32,6 +32,7 @@ alias fgrep='fgrep --color=auto'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+alias nvim='/opt/nvim/nvim'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
