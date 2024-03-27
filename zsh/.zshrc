@@ -21,19 +21,10 @@ plug "zsh-users/zsh-syntax-highlighting"
 # keybinds
 bindkey '^ ' autosuggest-accept
 bindkey jk vi-cmd-mode
+
 export KEYTIMEOUT=10
 export PATH="$HOME/.local/bin":$PATH
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export GPG_TTY=4826EB501C3BBA98
-
 autoload -Uz compinit
 
-# bun completions
-[ -s "/home/todd/.bun/_bun" ] && source "/home/todd/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

@@ -28,4 +28,4 @@ stow -d ~/dotfiles zsh # Just my zsh config
 
 ### ZSH
 - [ ] move secrets out of repo 
-
+- [ ] cannot have cursor blink :(
