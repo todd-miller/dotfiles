@@ -10,3 +10,5 @@ require("user.harpoon")
 require("user.lsp")
 require("user.todo")
 require("user.oil")
+
+-- require('dap-python').setup('~/.pyenv/versions/v3.10/bin/python')

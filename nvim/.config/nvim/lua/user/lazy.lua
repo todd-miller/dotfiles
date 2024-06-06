@@ -16,8 +16,50 @@ vim.opt.rtp:prepend(lazypath)
 local lazy = require("lazy")
 
 lazy.setup({
+  -- python venv support 
+  "direnv/direnv.vim",
+  -- dap
+  {
+    'rcarriga/nvim-dap-ui',
+    dependencies = {
+      'mfussenegger/nvim-dap',
+      'nvim-neotest/nvim-nio'
+    },
+    config = function()
+      local dap = require('dap')
+      local dapui = require('dapui')
+      dapui.setup()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+      -- dap.listeners.before.event_terminated["dapui_config"] = function()
+      --   dapui.close()
+      -- end
+      -- dap.listeners.before.event_exited["dapui_config"] = function()
+      --   dapui.close()
+      -- end
+    end
+  },
+  {
+    'mfussenegger/nvim-dap',
+  },
+  {
+    'mfussenegger/nvim-dap-python',
+    ft = "python",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "rcarriga/nvim-dap-ui"
+    },
+    config = function(_, opts)
+      local path = "~/.virtualenvs/debugpy/bin/python"
+      -- local path = "~/.pyenv/share/nvim/mason/packages/debugpy/venv/bin/python"
+      require("dap-python").setup(path)
+      require("dap-python").test_runner = "pytest"
+    end,
+  },
   -- Git related plugins
   'tpope/vim-fugitive',
+  'f-person/git-blame.nvim',
   -- 'tpope/vim-rhubarb',
   {
     "kdheepak/lazygit.nvim",
@@ -38,6 +80,9 @@ lazy.setup({
   -- tmux/nvim
   "christoomey/vim-tmux-navigator",
 
+  -- markdown preview
+  'davidgranstrom/nvim-markdown-preview',
+
   -- simple autopairs 
   'cohama/lexima.vim',
 
@@ -57,6 +102,15 @@ lazy.setup({
       "nvim-telescope/telescope.nvim",
     }
   },
+  {
+    'williamboman/mason.nvim',
+    config = true,
+    opts = {
+      ensure_installed = {
+        "debugpy"
+      }
+    }
+  },
 
   -- NOTE : This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -65,7 +119,10 @@ lazy.setup({
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
+      {
+        'williamboman/mason.nvim',
+        config = true,
+      },
       'williamboman/mason-lspconfig.nvim',
 
       -- Useful status updates for LSP
@@ -115,32 +172,14 @@ lazy.setup({
   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help ibl`
     main = 'ibl',
     opts = {},
   },
   {
     "folke/todo-comments.nvim",
-    dependencies = "nvim-lua/plenary.nvim",
-    options = {
-      keywords = {
-        FIX = {
-          icon = " ", -- icon used for the sign, and in search results
-          color = "error", -- can be a hex color, or a named color (see below)
-          alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
-          -- signs = false, -- configure signs for some keywords individually
-        },
-        TODO = { icon = " ", color = "info" },
-        HACK = { icon = " ", color = "warning" },
-        WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-        PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-        NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-        TEST = { icon = "⏲ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
-      },
-    }
-  },
+    dependencies = "nvim-lua/plenary.nvim"
 
+  },
   -- Fuzzy Finder (files, lsp, etc)
   {
     'nvim-telescope/telescope.nvim',
@@ -197,5 +236,9 @@ lazy.setup({
       }
     },
     lazy = false,
-  }
+  },
 }, {})
+
+
+
+

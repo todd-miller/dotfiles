@@ -18,9 +18,7 @@ eval "$(pyenv init -)"
 export PATH="/usr/bin/nvim-linux64/bin/nvim:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# alias j='z'
-# alias f='zi'
-# alias g='lazygit'
+alias lg='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # Colorize grep output (good for log files)
@@ -37,29 +35,32 @@ alias rm='rm -i'
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
+#parallel-ssh, scp, 
+alias pssh="parallel-ssh"
+alias pscp="parallel-scp"
 
-# vulcan/bfusa specific
+# local startup aliases 
 alias start-mongo="~/vulcan/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
-alias mongo="~/repos/mongo_scripts/mongo.sh"
 alias start-cloud="cd ~/vulcan/cloud/ && python plugin_dev/v17servicenode_launcher.py"
 alias start-toolkit="cd ~/repos/toolkit/app-react && npm run watch"
+
 alias ~~="cd /mnt/c/users/cw109854/"
 alias ~="cd ~"
-alias ssh-vulcan-dev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
-alias ssh-hpcmgt="sshpass -p Bridge@123 ssh -v -oHostKeyAlgorithms=+ssh-rsa shaniuk@hpcmgt01ppd.idm.bfusa.com"
-alias ssh-slurm="sshpass -p Bf20239854FallQuarter ssh millertodd@contractor.bfusa.com@10.243.28.113"
+
+# head-nodes for pbs and slurm
+alias ssh-hpcmgt="sshpass -p KJ=rOn@0S6FU ssh -v -oHostKeyAlgorithms=+ssh-rsa root@hpcmgt01ppd.idm.bfusa.com"
+alias ssh-slurm="sshpass -p Bf20239854SpringQuarter ssh millertodd@contractor.bfusa.com@10.243.28.113"
+alias ssh-reg="sshpass -p ':8=gq[]3|Fb_' ssh -v -oHostKeyAlgorithms=+ssh-rsa root@appbra02tpd.idm.bfusa.com"
+
+# vulcan servers
+alias ssh-dev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
 alias ssh-stable="sshpass -p vulcan17 ssh vjuser@10.139.15.89"
+alias ssh-branch="sshpass -p vulcan17 ssh vjuser@10.139.15.37"
 
-# TODO - psmem and pscpu not working
-# get top process eating memory
-# alias psmem='ps auxf | sort -nr -k 4 | head -5'
-# get top process eating cpu ##
-# alias pscpu='ps auxf | sort -nr -k 3 | head -5'
-
-# TODO - does not work --> for rustup doc on apple sillicon before it becomes tier1 platform
-# alias rustdoc="rustup doc --toolchain=stable-x86_64-apple-darwin"
-# alias m="git checkout master"
-# alias s="git checkout stable"
+# ec2 instances
+alias ssh-toddbox="ssh -i ~/.ssh/temp-todd-rsa.pem ubuntu@10.243.28.147"
+alias ssh-ec2-1="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.137"
+alias ssh-ec2-2="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.166"
 
 case "$(uname -s)" in
 

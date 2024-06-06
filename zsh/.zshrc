@@ -28,3 +28,5 @@ export PATH="$HOME/.local/bin":$PATH
 export GPG_TTY=4826EB501C3BBA98
 autoload -Uz compinit
 
+eval "$(direnv hook zsh)"
+

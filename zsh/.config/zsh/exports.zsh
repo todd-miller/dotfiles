@@ -12,6 +12,7 @@ export TMP=$HOME/.TMP/
 export KEYTIMEOUT=10
 export VI_MODE_ESC_INSERT="jk"
 
+export PATH=/mnt/c/Windows/System32/:$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.cargo/bin:$PATH 
 export PATH=$HOME/.local/share/go/bin:$PATH
