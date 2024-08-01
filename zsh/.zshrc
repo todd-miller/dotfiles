@@ -6,6 +6,7 @@
 HISTFILE=~/.zsh_history
 
 # source
+source ~/.env/.env_zsh
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 
@@ -26,7 +27,6 @@ bindkey jk vi-cmd-mode
 export KEYTIMEOUT=10
 export PATH="$HOME/.local/bin":$PATH
 autoload -Uz compinit
-source .env_zsh
 
 eval "$(direnv hook zsh)"
 

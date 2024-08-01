@@ -51,17 +51,17 @@ alias config_alias="nvim ~/dotfiles/zsh/.config/zsh/aliases.zsh"
 alias config_nvim="nvim ~/dotfiles/nvim/.config/nvim/lua/user/"
 
 # head-nodes for pbs, slurm, bamboo
-alias ssh-hpcmgt="sshpass -p KJ=rOn@0S6FU ssh -v -oHostKeyAlgorithms=+ssh-rsa root@hpcmgt01ppd.idm.bfusa.com"
-alias ssh-slurm="sshpass -p Bf20239854SpringQuarter ssh millertodd@contractor.bfusa.com@10.243.28.113"
-alias ssh-bamboo="sshpass -p WjyRksPg ssh -v -oHostKeyAlgorithms=+ssh-rsa root@10.139.15.67"
+alias ssh-hpcmgt="sshpass -p $BFUSA_HPCMGT ssh -v -oHostKeyAlgorithms=+ssh-rsa root@hpcmgt01ppd.idm.bfusa.com"
+alias ssh-slurm="sshpass -p $BFUSA_SLURM ssh millertodd@contractor.bfusa.com@10.243.28.113"
+alias ssh-bamboo="sshpass -p $BFUSA_BAMBOO ssh -v -oHostKeyAlgorithms=+ssh-rsa root@10.139.15.67"
 
 # docker v2 image repository
-alias ssh-registry="sshpass -p ':8=gq[]3|Fb_' ssh -v -oHostKeyAlgorithms=+ssh-rsa root@appbra02tpd.idm.bfusa.com"
+alias ssh-registry="sshpass -p $BFUSA_IMAGE_REGISTRY ssh -v -oHostKeyAlgorithms=+ssh-rsa root@appbra02tpd.idm.bfusa.com"
 
 # vulcan servers
-alias ssh-dev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
-alias ssh-stable="sshpass -p vulcan17 ssh vjuser@10.139.15.89"
-alias ssh-branch="sshpass -p vulcan17 ssh vjuser@10.139.15.37"
+alias ssh-dev="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.17"
+alias ssh-stable="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.89"
+alias ssh-branch="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.37"
 
 # ec2 instances
 alias ssh-toddbox="ssh -i ~/.ssh/temp-todd-rsa.pem ubuntu@10.243.28.147"

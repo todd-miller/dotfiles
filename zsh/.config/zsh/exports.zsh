@@ -30,7 +30,6 @@ export PATH="$PYENV_ROOT/shims:${PATH}"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export GPG_TTY=4826EB501C3BBA98
 
 # export XDG_CURRENT_DESKTOP="Wayland"
 # export PATH="$PATH:./node_modules/.bin"
