@@ -44,13 +44,19 @@ alias start-mongo="~/vulcan/mongo/bin/mongod.exe --storageEngine wiredTiger --db
 alias start-cloud="cd ~/vulcan/cloud/ && python plugin_dev/v17servicenode_launcher.py"
 alias start-toolkit="cd ~/repos/toolkit/app-react && npm run watch"
 
+# directory aliases
 alias ~~="cd /mnt/c/users/cw109854/"
 alias ~="cd ~"
+alias config_alias="nvim ~/dotfiles/zsh/.config/zsh/aliases.zsh"
+alias config_nvim="nvim ~/dotfiles/nvim/.config/nvim/lua/user/"
 
-# head-nodes for pbs and slurm
+# head-nodes for pbs, slurm, bamboo
 alias ssh-hpcmgt="sshpass -p KJ=rOn@0S6FU ssh -v -oHostKeyAlgorithms=+ssh-rsa root@hpcmgt01ppd.idm.bfusa.com"
 alias ssh-slurm="sshpass -p Bf20239854SpringQuarter ssh millertodd@contractor.bfusa.com@10.243.28.113"
-alias ssh-reg="sshpass -p ':8=gq[]3|Fb_' ssh -v -oHostKeyAlgorithms=+ssh-rsa root@appbra02tpd.idm.bfusa.com"
+alias ssh-bamboo="sshpass -p WjyRksPg ssh -v -oHostKeyAlgorithms=+ssh-rsa root@10.139.15.67"
+
+# docker v2 image repository
+alias ssh-registry="sshpass -p ':8=gq[]3|Fb_' ssh -v -oHostKeyAlgorithms=+ssh-rsa root@appbra02tpd.idm.bfusa.com"
 
 # vulcan servers
 alias ssh-dev="sshpass -p vulcan17 ssh vjuser@10.139.15.17"
@@ -59,6 +65,7 @@ alias ssh-branch="sshpass -p vulcan17 ssh vjuser@10.139.15.37"
 
 # ec2 instances
 alias ssh-toddbox="ssh -i ~/.ssh/temp-todd-rsa.pem ubuntu@10.243.28.147"
+alias ssh-slurmprod="ssh -i ~/.ssh/prod_hpc_api_user.pem ec2-user@10.243.45.155"
 alias ssh-ec2-1="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.137"
 alias ssh-ec2-2="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.166"
 

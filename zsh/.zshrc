@@ -1,5 +1,6 @@
 #!/bin/bash
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] \
+  && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 # history
 HISTFILE=~/.zsh_history
@@ -24,9 +25,8 @@ bindkey jk vi-cmd-mode
 
 export KEYTIMEOUT=10
 export PATH="$HOME/.local/bin":$PATH
-
-export GPG_TTY=4826EB501C3BBA98
 autoload -Uz compinit
+source .env_zsh
 
 eval "$(direnv hook zsh)"
 
