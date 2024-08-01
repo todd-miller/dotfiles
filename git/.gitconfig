@@ -19,10 +19,10 @@
 [credential]
 	helper = /mnt/c/Users/cw109854/PortableGit/mingw64/bin/git-credential-manager.exe
 [pager]
-  blame = delta
+	blame = delta
 [delta]
-  side-by-side = true
-  line-numbers = true
+	side-by-side = true
+	line-numbers = true
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
 [commit]
