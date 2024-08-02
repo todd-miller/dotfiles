@@ -1,3 +1,3 @@
-imap jk <esc>
-vmap jk <esc>
+imap jk <ESC>
+vmap jk <ESC>
 set timeoutlen=200
