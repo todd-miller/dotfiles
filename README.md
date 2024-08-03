@@ -26,6 +26,3 @@ stow -d ~/dotfiles zsh # Just my zsh config
 - [ ] better look/feel
 
 
-### ZSH
-- [ ] move secrets out of repo 
-

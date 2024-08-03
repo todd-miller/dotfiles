@@ -1,7 +1,6 @@
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
-
 cmp.setup {
   completion = {
     completeopt = 'menu,menuone,noinsert',
@@ -36,5 +35,4 @@ cmp.setup {
     { name = 'path' },
   },
 }
-
 
