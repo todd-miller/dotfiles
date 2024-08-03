@@ -27,6 +27,3 @@ bindkey jk vi-cmd-mode
 export KEYTIMEOUT=10
 export PATH="$HOME/.local/bin":$PATH
 autoload -Uz compinit
-
-eval "$(direnv hook zsh)"
-
