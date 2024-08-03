@@ -1,7 +1,6 @@
 #!/bin/sh
 alias ll="ls -l"
-alias lla="ls -l -a"
-
+alias lla="ls -al"
 alias lvim="$HOME/.local/bin/lvim"    
 
 # TODO - OSx specific  - consider moving 
@@ -16,11 +15,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+export PATH="/usr/bin/nvim-linux64/bin/nvim:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-alias j='z'
-alias f='zi'
-alias g='lazygit'
+alias lg='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # Colorize grep output (good for log files)
@@ -32,21 +30,45 @@ alias fgrep='fgrep --color=auto'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+alias nvim='/opt/nvim/nvim'
 
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
-# TODO - psmem and pscpu not working
-# get top process eating memory
-# alias psmem='ps auxf | sort -nr -k 4 | head -5'
-# get top process eating cpu ##
-# alias pscpu='ps auxf | sort -nr -k 3 | head -5'
+#parallel-ssh, scp, 
+alias pssh="parallel-ssh"
+alias pscp="parallel-scp"
 
-# TODO - does not work --> for rustup doc on apple sillicon before it becomes tier1 platform
-# alias rustdoc="rustup doc --toolchain=stable-x86_64-apple-darwin"
-# alias m="git checkout master"
-# alias s="git checkout stable"
+# local startup aliases 
+alias start-mongo="~/vulcan/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
+alias start-cloud="cd ~/vulcan/cloud/ && python plugin_dev/v17servicenode_launcher.py"
+alias start-toolkit="cd ~/repos/toolkit/app-react && npm run watch"
+
+# directory aliases
+alias ~~="cd /mnt/c/users/cw109854/"
+alias ~="cd ~"
+alias config_alias="nvim ~/dotfiles/zsh/.config/zsh/aliases.zsh"
+alias config_nvim="nvim ~/dotfiles/nvim/.config/nvim/lua/user/"
+
+# head-nodes for pbs, slurm, bamboo
+alias ssh-hpcmgt="sshpass -p $BFUSA_HPCMGT ssh -v -oHostKeyAlgorithms=+ssh-rsa root@hpcmgt01ppd.idm.bfusa.com"
+alias ssh-slurm="sshpass -p $BFUSA_SLURM ssh millertodd@contractor.bfusa.com@10.243.28.113"
+alias ssh-bamboo="sshpass -p $BFUSA_BAMBOO ssh -v -oHostKeyAlgorithms=+ssh-rsa root@10.139.15.67"
+
+# docker v2 image repository
+alias ssh-registry="sshpass -p $BFUSA_IMAGE_REGISTRY ssh -v -oHostKeyAlgorithms=+ssh-rsa root@appbra02tpd.idm.bfusa.com"
+
+# vulcan servers
+alias ssh-dev="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.17"
+alias ssh-stable="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.89"
+alias ssh-branch="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.37"
+
+# ec2 instances
+alias ssh-toddbox="ssh -i ~/.ssh/temp-todd-rsa.pem ubuntu@10.243.28.147"
+alias ssh-slurmprod="ssh -i ~/.ssh/prod_hpc_api_user.pem ec2-user@10.243.45.155"
+alias ssh-ec2-1="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.137"
+alias ssh-ec2-2="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.166"
 
 case "$(uname -s)" in
 
@@ -66,3 +88,4 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+

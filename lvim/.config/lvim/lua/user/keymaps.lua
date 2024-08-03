@@ -1,4 +1,3 @@
-
 lvim.leader = "space"
 
 lvim.keys.insert_mode["jk"] = "<ESC>"
@@ -13,4 +12,4 @@ lvim.keys.normal_mode["˚"] = ":m .-2<CR>=="
 lvim.keys.normal_mode["n"] = "nzz"
 lvim.keys.normal_mode["N"] = "Nzz"
 lvim.keys.normal_mode["-"] = ":Oil<CR>"
-
+lvim.keys.normal_mode['gx'] = ":execute '!wslview' . shellescape(expand('<cfile>'), 1)<CR>"

@@ -1,12 +1,14 @@
 #!/bin/bash
-[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] \
+  && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 # history
 HISTFILE=~/.zsh_history
 
 # source
-plug "$HOME/.config/zsh/aliases.zsh"
+source ~/.env/.env_zsh
 plug "$HOME/.config/zsh/exports.zsh"
+plug "$HOME/.config/zsh/aliases.zsh"
 
 # plugins
 plug "zsh-users/zsh-autosuggestions"
@@ -20,9 +22,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 
 # keybinds
 bindkey '^ ' autosuggest-accept
+bindkey jk vi-cmd-mode
 
+export KEYTIMEOUT=10
 export PATH="$HOME/.local/bin":$PATH
-
 autoload -Uz compinit
-compinit
-
