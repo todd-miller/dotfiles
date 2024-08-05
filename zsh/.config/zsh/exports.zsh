@@ -3,7 +3,7 @@
 HISTSIZE=1000000
 SAVEHIST=1000000
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+# export TERMINAL="alacritty"
 export BROWSER="chrome"
 export MANPAGER='lvim +Man!'
 export MANWIDTH=999

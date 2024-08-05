@@ -23,7 +23,7 @@ bindkey '^ ' autosuggest-accept
 bindkey jk vi-cmd-mode
 
 export KEYTIMEOUT=10
-export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.local/bin:/opt/nvim":$PATH
 
 export GPG_TTY=4826EB501C3BBA98
 autoload -Uz compinit

@@ -1,11 +1,8 @@
 #!/bin/sh
 alias ll="ls -l"
 alias lla="ls -al"
-alias lvim="$HOME/.local/bin/lvim"    
 
 # TODO - OSx specific  - consider moving 
-alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
-alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -15,12 +12,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH="/usr/bin/nvim-linux64/bin/nvim:$PATH"
+export PATH="/opt/bin/nvim"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-# alias j='z'
-# alias f='zi'
-# alias g='lazygit'
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # Colorize grep output (good for log files)
@@ -66,6 +60,8 @@ case "$(uname -s)" in
 Darwin)
 	# echo 'Mac OS X'
 	alias ls='ls -G'
+	alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
+	alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 	;;
 
 Linux)
