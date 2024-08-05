@@ -1,24 +1,23 @@
 #!/bin/sh
+
+export PATH='/usr/bin':$PATH
 alias ll="ls -l"
 alias lla="ls -al"
-alias lvim="$HOME/.local/bin/lvim"    
 
-# TODO - OSx specific  - consider moving 
-alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
-alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
-export PATH="/usr/bin/nvim-linux64/bin/nvim:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+
 alias lg='lazygit'
+
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 
 # Colorize grep output (good for log files)
@@ -35,6 +34,8 @@ alias nvim='/opt/nvim/nvim'
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
+
+# vulcan/bfusa specific
 
 #parallel-ssh, scp, 
 alias pssh="parallel-ssh"
@@ -71,10 +72,11 @@ alias ssh-ec2-1="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.137"
 alias ssh-ec2-2="ssh -i ~/.ssh/bamboo_ec2_1.pem ec2-user@10.243.28.166"
 
 case "$(uname -s)" in
-
 Darwin)
 	# echo 'Mac OS X'
 	alias ls='ls -G'
+	alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
+	alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 	;;
 
 Linux)
