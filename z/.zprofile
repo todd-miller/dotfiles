@@ -13,11 +13,11 @@ export XDG_DATA_HOME=$HOME/.local/share
 # export NVM_DIR="$HOME/.nvm"
 # . "/opt/homebrew/opt/nvm/nvm.sh"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 
 # Added by Toolbox App
-export PATH="$PATH:/usr/local/bin"
-eval $(/opt/homebrew/bin/brew shellenv) eval
+export PATH="/usr/local/bin:/usr/bin:$PATH"
+# eval $(/opt/homebrew/bin/brew shellenv) eval

@@ -1,18 +1,18 @@
 #!/bin/sh
+
+export PATH='/usr/bin':$PATH
 alias ll="ls -l"
 alias lla="ls -al"
 
-# TODO - OSx specific  - consider moving 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
-export PATH="/opt/bin/nvim"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
@@ -30,7 +30,6 @@ alias rm='rm -i'
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
-
 
 # vulcan/bfusa specific
 alias start-mongo="~/vulcan/mongo/bin/mongod.exe --storageEngine wiredTiger --dbpath ~/mongo/database/wiredtiger"
@@ -56,7 +55,6 @@ alias ssh-stable="sshpass -p vulcan17 ssh vjuser@10.139.15.89"
 # alias s="git checkout stable"
 
 case "$(uname -s)" in
-
 Darwin)
 	# echo 'Mac OS X'
 	alias ls='ls -G'
