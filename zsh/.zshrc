@@ -6,6 +6,7 @@
 HISTFILE=~/.zsh_history
 
 # source
+source ~/.env/.env_zsh
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 
@@ -28,4 +29,3 @@ export PATH="$HOME/.local/bin:/opt/nvim":$PATH
 
 export GPG_TTY=4826EB501C3BBA98
 autoload -Uz compinit
-

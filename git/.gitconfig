@@ -3,8 +3,8 @@
 	directory = /home/todd/repos/toolkit
 	directory = /home/todd/
 [user]
-	name = Todd Miller
-	email = MillerTodd@contractor.bfusa.com
+	name = todd
+	email = t.miller07@gmail.com 
 [alias]
 	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
 	new = lg development..HEAD
@@ -19,10 +19,10 @@
 [credential]
 	helper = /mnt/c/Users/cw109854/PortableGit/mingw64/bin/git-credential-manager.exe
 [pager]
-  blame = delta
+	blame = delta
 [delta]
-  side-by-side = true
-  line-numbers = true
+	side-by-side = true
+	line-numbers = true
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
 [commit]
