@@ -19,8 +19,7 @@ plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
 
 # todo - this is not working
-# plug "zap-zsh/exa"
-
+plug "zap-zsh/exa"
 plug "zap-zsh/vim"
 plug "todd-miller/zsh-prompt"
 plug "zap-zsh/fzf"
