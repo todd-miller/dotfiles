@@ -6,7 +6,7 @@
 	name = todd
 	email = t.miller07@gmail.com 
 [alias]
-	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
+	lg = log --pretty='%C(red)%h%Creset%C(green)%an%Creset%C(cyan)(%ci)%Creset%C(yellow)%d%Creset %s %C(cyan)(%ci)%Creset'
 	new = lg development..HEAD
 	missing = lg HEAD..development
 [core]

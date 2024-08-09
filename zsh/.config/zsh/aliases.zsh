@@ -3,6 +3,7 @@
 export PATH='/usr/bin':$PATH
 alias ll="ls -l"
 alias lla="ls -al"
+alias PATH_minus='~/utils/path_minus.sh'
 
 
 export NVM_DIR="$HOME/.nvm"

@@ -35,3 +35,6 @@ export PATH="$HOME/.local/bin:/opt/nvim":$PATH
 
 export GPG_TTY=4826EB501C3BBA98
 autoload -Uz compinit
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
