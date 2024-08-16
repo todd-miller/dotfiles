@@ -21,6 +21,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/go/bin:$PATH
 export PATH=$HOME/.fnm:$PATH
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 
 # NVM
 # export NVM_DIR="$HOME/.nvm"

@@ -55,6 +55,7 @@ alias config_nvim="nvim ~/dotfiles/nvim/.config/nvim/lua/user/"
 
 # head-nodes for pbs, slurm, bamboo
 alias ssh-hpcmgt="sshpass -p $BFUSA_HPCMGT ssh -v -oHostKeyAlgorithms=+ssh-rsa root@hpcmgt01ppd.idm.bfusa.com"
+alias ssh-hpc="sshpass -p '$BFUSA_HPC' ssh -v -oHostKeyAlgorithms=+ssh-rsa tmiller@hpcmgt01ppd.idm.bfusa.com"
 alias ssh-slurm="sshpass -p $BFUSA_SLURM ssh millertodd@contractor.bfusa.com@10.243.28.113"
 alias ssh-bamboo="sshpass -p $BFUSA_BAMBOO ssh -v -oHostKeyAlgorithms=+ssh-rsa root@10.139.15.67"
 

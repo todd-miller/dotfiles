@@ -6,7 +6,7 @@
 HISTFILE=~/.zsh_history
 
 # nvm source
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh
 
 # source
 source ~/.env/.env_zsh
@@ -37,3 +37,4 @@ autoload -Uz compinit
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
