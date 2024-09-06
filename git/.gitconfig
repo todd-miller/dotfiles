@@ -11,6 +11,7 @@
 	missing = lg HEAD..development
 [core]
 	pager = delta
+	autocrlf = true
 [rebase]
 	autosquash = true
 	autoStash = true

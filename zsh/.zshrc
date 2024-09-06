@@ -3,7 +3,9 @@
   && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 
 # history
+# [https://gist.github.com/mattmc3/c490d01751d6eb80aa541711ab1d54b1]
 HISTFILE=~/.zsh_history
+setopt appendhistory
 
 # nvm source
 # source $(brew --prefix nvm)/nvm.sh
