@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 local lazy = require("lazy")
 
 lazy.setup({
+  { "folke/neodev.nvim", opts = {} },
   { 'echasnovski/mini.icons', version = false },
   -- python venv support 
   "direnv/direnv.vim",

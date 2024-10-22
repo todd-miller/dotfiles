@@ -21,11 +21,15 @@ plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
 
 # todo - this is not working
-plug "zap-zsh/exa"
 plug "zap-zsh/vim"
 plug "todd-miller/zsh-prompt"
 plug "zap-zsh/fzf"
 plug "zsh-users/zsh-syntax-highlighting"
+
+
+# deno completions
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit
 
 # keybinds
 bindkey '^ ' autosuggest-accept
@@ -40,3 +44,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "/Users/todd/.deno/env"

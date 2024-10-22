@@ -70,7 +70,7 @@ alias ssh-branch="sshpass -p $BFUSA_VJUSER ssh vjuser@10.139.15.37"
 # ec2 instances
 alias ssh-toddbox="ssh -i ~/.ssh/temp-todd-rsa.pem ubuntu@10.243.28.147"
 alias ssh-slurmprod="ssh -i ~/.ssh/prod_hpc_api_user.pem ec2-user@10.243.45.155"
-alias ssh-ec2-1="ssh -i ~/.ssh/bamboo_ec2_1.pem -o ServerAliveInterval=60 ec2-user@10.243.28.137"
+alias ssh-ec2="ssh -i ~/.ssh/bamboo_ec2_1.pem -o ServerAliveInterval=60 ec2-user@10.243.28.137"
 alias ssh-ec2-2="ssh -i ~/.ssh/bamboo_ec2_1.pem -o ServerAliveInterval=60 ec2-user@10.243.28.166"
 
 case "$(uname -s)" in
